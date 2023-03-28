@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <th:block>
+        <table th:border="5" th:width="500" th:height="300" th:align="center" th:cellspacing="5" th:bgcolor="bisque">
+            <thead>
+            <tr th:bgcolor="Plum">
+                <th>Make</th>
+                <th>Model</th>
+                <th>Generation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="car : ${cars}" th:align="center" th:bgcolor="Thistle">
+                <td th:text="${car.getMake()} "></td>
+                <td th:text="${car.getModel()}"></td>
+                <td th:text="${car.getGeneration()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </th:block>
+</div>
+</body>
+</html>
