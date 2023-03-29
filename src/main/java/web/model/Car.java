@@ -5,6 +5,9 @@ public class Car {
     private String model;
     private int generation;
 
+    public Car() {
+    }
+
     public Car(String make, String model, int generation) {
         this.make = make;
         this.model = model;
